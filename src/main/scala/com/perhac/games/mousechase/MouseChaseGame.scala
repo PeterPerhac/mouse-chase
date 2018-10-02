@@ -25,10 +25,7 @@ class MouseChaseGame {
 
     world = new World(renderer, cat)
     world.add(cat)
-    (1 to 10).toList.map { _ =>
-      println("adding mouse")
-      world.add(Mouse.randomMouse(w, h))
-    }
+    (1 to 10).foreach(_ => world.add(Mouse.randomMouse(w, h)))
 
     world.loop.run()
   }

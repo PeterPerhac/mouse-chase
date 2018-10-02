@@ -78,7 +78,6 @@ case class Cat(catNumber: Int, x: Double, y: Double)
 
   def heading: Vector2 = Vector2.Right.rotateRadians(sprite.rotation)
 
-  override def collides(origin: GameObject, point: Vector2): Boolean = false
 }
 
 case class Mouse(mouseNumber: Int, x: Double, y: Double, scale: Double = 1.0) extends SpriteGameObject(s"mouse$mouseNumber.png", x: Double, y: Double, scale: Double) {
